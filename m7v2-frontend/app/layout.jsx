@@ -39,64 +39,17 @@ export default function RootLayout({ children }) {
           </header>
 
           {/*hero*/}
-          <div>
-          <img src="/images/TST-peninsula.jpg" alt= "" className ="w-full" />
-          <div>hero title</div>
-          <div>hero subtitle</div>
-          <div> button</div>
-          </div>
-          <div>
-          <section className='px-16 py-y bg-gray-500'>
-            <div>
-              <h2 className="text-grey-700 text-6xl font-semibold"> stay with us</h2>
-              <h3 className="text-2xl font-semibold" > come experience the vibe of Tsim Sha Tsui</h3>
-            </div>
-          <div>
-            <h4 className='font-bold mt-4 pb-2 border-b border-gray-200'>What we offer</h4>
-            <div className='mt-8 grid lg:grid-cols-3 gap-10' >
-              {/* cards go here*/}
+          
 
-              <div className='card' >
-                <img src="/images/rooms-placeholder.jpeg" alt ="" className='w-full h-32 sm:h-48 object-cover'/>
-                  <div className='m-4'>
-                    <span className='font-bold'>card title</span>
-                    <span className='block text-gray-500 text-sm'> card text</span>
-                  </div>
-              </div>
-              <div className='card' >
-                <img src="/images/rooms-placeholder.jpeg" alt ="" className='w-full h-32 sm:h-48 object-cover'/>
-                  <div className='m-4'>
-                    <span className='font-bold'>card title</span>
-                    <span className='block text-gray-500 text-sm'> card text</span>
-                  </div>
-              </div>
-              <div className='card' >
-                <img src="/images/rooms-placeholder.jpeg" alt ="" className='w-full h-32 sm:h-48 object-cover'/>
-                  <div className='m-4'>
-                    <span className='font-bold'>card title</span>
-                    <span className='block text-gray-500 text-sm'> card text</span>
-                  </div>
-                  <div className='card' >
-                <img src="/images/rooms-placeholder.jpeg" alt ="" className='w-full h-32 sm:h-48 object-cover'/>
-                  <div className='m-4'>
-                    <span className='font-bold'>card title</span>
-                    <span className='block text-gray-500 text-sm'> card text</span>
-                  </div>
-              </div>
-              </div>
-            </div>
-
-          </div>
-          </section>
+          <div>
+         
           </div>
         </main>
       </div>
         
         {children}
         
-        <script src="menu.js">
 
-        </script>
         </body>
     </html>
   )

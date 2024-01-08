@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
+
 /* base styles */
 html {
   line-height:1.15;
@@ -16,6 +17,51 @@ html {
 
 .btn{
   @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wide;
+}
+
+
+.imageWrapper{
+  @apply flex flex-col justify-center items-center;
+}
+
+.heroContent{
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+/*
+.hero-text {
+  @apply text-center relative;
+  /*top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  //color: white;
+  
+}
+*/
+
+
+
+
+
+
+
+
+
+.heroWrapper {
+  @apply relative w-full h-screen;
+
+}
+
+
+.imageWrapper {
+  @apply z-0;
+}
+
+
+.heroContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* rgb 
 80 11 245 #500BF5

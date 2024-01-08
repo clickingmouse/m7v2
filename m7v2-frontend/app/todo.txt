@@ -1,0 +1,24 @@
+
+
+our offer
+
+1. affordable rooms 
+room pic have.
+
+2. convenient location
+picture of mtr exot
+
+3 multilingual host
+??
+
+4. Free Wifi
+wifi pic
+
+5. nearby restaurant
+bakeries
+
+6. Shopping
+shoping malls pic
+
+ move navbar to components
+ change <a> to <Link>
