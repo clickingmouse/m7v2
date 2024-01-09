@@ -2,6 +2,7 @@
 import Link from 'next/link'
 
 import Hero from './components/hero/Hero'
+import ContactForm from './components/form/ContactForm'
 
 /* landing page?*/
 export default function Home() {
@@ -78,9 +79,11 @@ export default function Home() {
           <section>        {/* map */}
           <h2>Our Location</h2>
 </section>
-          <section>    
+<section className='px-16 py-y bg-blue-500'>
             {/* contact */}
-            <h3>Contact Us Now</h3>
+            <div className='mt-8 grid md:grid-cols-2 lg:grid-cols-2 gap-10' >
+            <ContactForm />
+            </div>
 </section>
 
 </div>
