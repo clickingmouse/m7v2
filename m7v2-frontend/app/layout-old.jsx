@@ -1,7 +1,7 @@
 import './globals.css'
 //import 'tailwindcss/tailwind.css'
 
-import NavBar from './components/navBar/NavBar'
+import NavBar from './components/navBar/NavBar-old'
 import { Inter } from 'next/font/google'
 
 import {uesEffect} from 'react'

@@ -9,7 +9,10 @@ module.exports = {
     extend: {
 
       colors: {
-        primary : '#7856ff'
+        primary : '#7856ff',
+        navcolor: '#3E8BA6',
+        contactcolor: '#FDF7F7',
+        bodycolor:'#FFFFFF'
       },
 
       backgroundImage: {
@@ -18,8 +21,10 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily:{
-        body:['Nunito']
-      }
+        body:['Nunito'],
+        hero:['Cardo']
+      },
+      
     },
   },
   plugins: [],
@@ -29,3 +34,5 @@ module.exports = {
 //41 134 246 / 192 237 251
 //198 241 255 / 41 134 246
 // 186 125 253 /
+//#BAE3F2
+// btn gray-700

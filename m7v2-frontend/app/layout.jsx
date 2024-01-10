@@ -1,7 +1,9 @@
 import './globals.css'
 //import 'tailwindcss/tailwind.css'
 
+import NavBarOld from './components/navBar/NavBar-old'
 import NavBar from './components/navBar/NavBar'
+
 import { Inter } from 'next/font/google'
 
 import {uesEffect} from 'react'
@@ -18,39 +20,18 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+<head>
+<title>Majestic 7 Guesthouse </title>
+</head>
+<body className='text-gray-600 font-body'>
+<header>
 
-      <body className='text-gray-600 font-body'>
-        <div className='grid md:grid-cols-3'> {/*<!-- content wrapper-->*/}
-        <div className='md:col-span-1 md:flex md:justify-end'>
-
-        <NavBar />
-        </div>{/*<!-- end nav wrapper-->*/}
-
-        <main className="px-16 py-6 md:col-span-2" >
-
-          <div className='flex justify-center md:justify-end'>
-          <a href="#" className='text-primary btn border-primary md:border-2 hover:bg-primary hover:text-white'>Log in</a>
-            <a href="#" className='ml-2 btn border-primary md:border-2 hover:bg-primary hover:text-white'>Sign up</a>
-          </div>
-
-          <header>
-            <h2> h2 header</h2>
-            <h3> h3 header</h3>
-          </header>
-
-          {/*hero*/}
-          
-
-          <div>
-         
-          </div>
-        </main>
-      </div>
-        
-        {children}
-        
-
-        </body>
+</header>
+<nav>
+<NavBar/>
+</nav> 
+<h2></h2>   
+        {children}</body>
     </html>
   )
 }

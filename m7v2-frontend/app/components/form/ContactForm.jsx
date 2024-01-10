@@ -14,9 +14,10 @@ const [sender, setSender] = useState('')
 const [email, setEmail] = useState('')
 const [isLoading, setIsLoading] = useState(false)
 
-handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault()
   setIsLoading(true)
+
 
   const msg = {
     subject, message, email
