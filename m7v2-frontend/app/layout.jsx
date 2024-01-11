@@ -3,7 +3,7 @@ import './globals.css'
 
 import NavBarOld from './components/navBar/NavBar-old'
 import NavBar from './components/navBar/NavBar'
-
+import Footer from './components/footer/Footer'
 import { Inter } from 'next/font/google'
 
 import {uesEffect} from 'react'
@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
 <NavBar/>
 </nav> 
 <h2></h2>   
-        {children}</body>
+        {children}
+        <Footer />
+        </body>
     </html>
   )
 }

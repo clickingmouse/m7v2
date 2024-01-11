@@ -17,7 +17,7 @@ import Link from "next/link";
 export default function NavBar(toggle) {
   return (
     <>
-      <div className="w-full h-20  fixed top-0 bg-navcolor">
+      <div className="w-full h-20  fixed top-0 bg-navcolor z-50">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <Logo />

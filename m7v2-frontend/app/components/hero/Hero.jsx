@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const IMAGE_PATH = '/images/TST-peninsula.jpg'
 import styles from './hero.css';
+import Link from 'next/link';
 const { heroContent, heroWrapper, imageWrapper } = styles;
 
 //todo
@@ -31,7 +32,7 @@ export default function Hero() {
 
 <>
 
-<div className='heroWrapper -z-[1] relative  flex flex-col bg-indigo-200 ' style={{height:"60vh"}}>
+<div className='heroWrapper -z-[1] relative  flex flex-col bg-white ' style={{height:"60vh"}}>
       <div className='imageWrapper bg-red overflow-hidden ' >
         <Image
           priority
@@ -46,44 +47,67 @@ export default function Hero() {
           // sizes="100vw"
           // style={{ width: '100%', height: 'auto',  zIndex: "-1" }} // optional
           className="object-contain  max-w-full b z-0"
-          
-          alt="hero image example bg-blue"
+          style ={{clipPath: "ellipse(120% 90% at 50% 0)"}}
+          alt="hero image example "
         />
       </div>
 
 
 
       {/**overlay */}
-      <div className='  absolute w-full h-full z-10' style={{backgroundColor:"#3E8BA6", opacity:"0.7"}}    >
+      <div className='  absolute w-full h-full z-10' style={{backgroundColor:"#3E8BA6", opacity:"0.7" , clipPath: "ellipse(120% 90% at 50% 0)"}}    >
       
       </div>
 
 
       <div className= 'flex flex-wrap flex-col justify-center items-start content-start  absolute w-full h-full  heroContent  z-20  mx-auto px-5 md:px-6 transition-all duration-300 pt-12 lg:pt-40 pb-12 lg:pb-40 ' >
-        <h2 className="text-white text-6xl font-semibold font-hero-700 "style={{opacity:"1"}}> BOOK a stay with us!</h2>
+        <div className='flex flex-row justify-center'>
+          <Link href="#" className="rounded-full py-3 px-3 uppercase text-4xl font-bold cursor-pointer tracking-wide text-white
+          border-orange-600 border-2 bg-orange-700
+          ">Book</Link>
+        <h2 className="text-white text-6xl font-semibold font-hero-700 "style={{opacity:"1"}}> a stay with us!</h2>
+
+        </div>
         <p className=" self-start text-white text-2xl font-semibold font-hero-700 " > & experience the vibe of Tsim Sha Tsui</p>
 
 
       </div>
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style={{height:'100%'}}>
-  <path
-    d="M 10,30
-           A 20,20 0,0,1 50,30
-           A 20,20 0,0,1 90,30
-           Q 90,60 50,90
-           Q 10,60 10,30 z" />
-</svg>
-      <svg class="absolute bottom-0 left-0" width="1017" height="396" viewBox="0 0 1017 396"><defs><clipPath id="4feb6d69-a77c-4a26-9ceb-8b8fdd9189b7"><rect width="1017" height="334" fill="transparent"></rect><path d="M0 0 C508.5 62 508.5 62 1017 0 L1017 0 L0 0" transform="translate(0, 334)" fill="transparent"></path></clipPath></defs></svg>
 
-      <img 
-      src="./images/test.svg"
-      style={{width:"100%", height:"50px", zIndex:"50"}}
-      alt="test"
       
- />
+ 
+      
+
     </div>
 
 </>
     )
 }
 
+
+//gap-40
+
+
+{/* <div className='z-30' style={{
+  width: "100%",
+  height: "250px",
+  background: "linear-gradient(to bottom,blue 50%,red 0px)",
+  //padding: 20px 0";
+  overflow: "hidden",
+  //paddingBottom:"20px",
+
+  //<path d="M0 0 C676 82 676 82 1352 0 L1352 0 L0 0" transform="translate(0, 629)" fill="transparent"></path>
+}}>
+<div className='z-40'style={{
+//#ellipse {
+float: "",
+width: "100%",
+height: "15%",
+//margin: "20px",
+shapeOutside: "ellipse(80% 90% at 50% 0)",
+clipPath: "ellipse(80% 90% at 50% 0)",
+background: "lightblue"
+//}
+
+}}></div>
+
+</div> */}

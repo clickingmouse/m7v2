@@ -21,4 +21,12 @@ bakeries
 shoping malls pic
 
  move navbar to components
- change <a> to <Link>
+ change <a> to <Link> - complete
+hook up onclick hamburger
+
+hero 
+our offer & cards
+getting here and map
+contact
+
+finalize navbar
