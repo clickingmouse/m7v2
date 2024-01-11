@@ -1,7 +1,13 @@
+'use client'
+import React from 'react'
 import { useMemo } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-export default function Home() {
+
+//22.29874175739053, 114.17236517374718
+//
+//export default function Teaser() {
+  export default function GMap() {
  const { isLoaded } = useLoadScript({
    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
  });
@@ -11,7 +17,7 @@ export default function Home() {
 }
 
 function Map() {
- const center = useMemo(() => ({ lat: 44, lng: -80 }), []);
+ const center = useMemo(() => ({ lat: 22.29874175739053, lng:114.17236517374718 }), []);
 
  return (
    <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
