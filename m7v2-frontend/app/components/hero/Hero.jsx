@@ -61,11 +61,11 @@ export default function Hero() {
 
 
       <div className= 'flex flex-wrap flex-col justify-center items-start content-start  absolute w-full h-full  heroContent  z-20  mx-auto px-5 md:px-6 transition-all duration-300 pt-12 lg:pt-40 pb-12 lg:pb-40 ' >
-        <div className='flex flex-row justify-center'>
-          <Link href="#" className="rounded-full py-3 px-3 uppercase text-4xl font-bold cursor-pointer tracking-wide text-white
+        <div className='flex flex-row justify-center content-center'>
+          <Link href="#" className="rounded-full py-2 px-3 uppercase text-4xl font-bold cursor-pointer tracking-wide text-white
           border-orange-600 border-2 bg-orange-700
           ">Book</Link>
-        <h2 className="text-white text-6xl font-semibold font-hero-700 "style={{opacity:"1"}}> a stay with us!</h2>
+        <h2 className="mx-1 text-white text-5xl font-semibold font-bold "style={{opacity:"1"}}> a stay with us!</h2>
 
         </div>
         <p className=" self-start text-white text-2xl font-semibold font-hero-700 " > & experience the vibe of Tsim Sha Tsui</p>
