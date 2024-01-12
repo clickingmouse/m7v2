@@ -6,6 +6,7 @@ export default function handyApps() {
     <main>
         <nav>
             <h2>handy apps</h2>
+            <p>coming soon</p>
         </nav>
         <AppList />
 

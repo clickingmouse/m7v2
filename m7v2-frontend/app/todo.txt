@@ -30,3 +30,5 @@ getting here and map
 contact
 
 finalize navbar
+
+place holder pages
