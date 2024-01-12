@@ -3,6 +3,7 @@ import './globals.css'
 
 import NavBarOld from './components/navBar/NavBar-old'
 import NavBar from './components/navBar/NavBar'
+import Navigation from './components/navBar'
 import Footer from './components/footer/Footer'
 import { Inter } from 'next/font/google'
 
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
 
 </header>
 <nav>
-<NavBar/>
+<Navigation/>
 </nav> 
 <h2></h2>   
         {children}

@@ -14,6 +14,7 @@ import Link from "next/link";
 // changed sticky to fixed
 
 //bg-emerald-800
+//{ toggle }: { toggle: () => void }
 export default function NavBar(toggle) {
   return (
     <>
