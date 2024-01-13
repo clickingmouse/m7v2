@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 //import Menu from "./menu";
 import Menu from "../menu";
 
