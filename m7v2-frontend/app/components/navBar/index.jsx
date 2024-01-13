@@ -1,15 +1,15 @@
 "use client";
 import { useState } from "react";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 //import Menu from "./menu";
-import Menu from '../menu';
+import Menu from "../menu";
 
 const Navigation = () => {
   // toggle sidebar
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
-    console.log(' toggle isOpen: ' + isOpen)
+    console.log(" toggle isOpen: " + isOpen);
   };
   return (
     <>
