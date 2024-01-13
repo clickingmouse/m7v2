@@ -1,16 +1,12 @@
-'use client'
+"use client";
 import React from "react";
 import Link from "next/link";
 
-
 //<Menu isOpen={isOpen} toggle={toggle} />
-const Menu = (
-    {isOpen}, {toggle}) =>{
-
-
-        console.log(isOpen)
-        console.log(toggle)
-//    {isOpen,toggle,}: {isOpen: boolean; toggle: () => void;}): JSX.Element => {
+const Menu = ({ isOpen, toggle }) => {
+  console.log(isOpen);
+  console.log(typeof toggle);
+  //    {isOpen,toggle,}: {isOpen: boolean; toggle: () => void;}): JSX.Element => {
   return (
     <>
       <div
@@ -37,12 +33,12 @@ const Menu = (
 
         <ul className="sidebar-nav text-center leading-relaxed text-xl">
           <li>
-            <Link href="/rooms" >
+            <Link href="/rooms">
               <p>Rooms</p>
             </Link>
           </li>
           <li>
-            <Link href="/getthingHere" >
+            <Link href="/getthingHere">
               <p>Getting Here</p>
             </Link>
           </li>
