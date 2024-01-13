@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Hero from "./components/hero/Hero";
 import ContactForm from "./components/form/ContactForm";
-import Teaser from "./components/teaser/teaser";
+import Teaser from "./components/teaser/Teaser";
 /* landing page?*/
 export default function Home() {
   return (
