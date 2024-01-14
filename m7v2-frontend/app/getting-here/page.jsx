@@ -15,16 +15,14 @@ import MapDirections from "../components/map";
 
 export default function GettingHere() {
   // state of starting location to pass to map
-  const [startingLocation, setStartingLocation] = useState(
-    "Hong Kong International Airport"
-  );
+  const [origin, setOrigin] = useState("Hong Kong International Airport");
 
   //const handleSubmit = async (e) => {
   const handleClick = (e, selection) => {
     e.preventDefault();
     console.log("path clicked" + selection);
-    setStartingLocation(selection);
-    console.log(startingLocation);
+    setOrigin(selection);
+    console.log(origin + " selected");
   };
 
   return (
@@ -37,16 +35,32 @@ export default function GettingHere() {
         {/* map-meenu wrapper*/}
         <div>
           <ul>
-            <li onClick={(e) => handleClick(e, 1)}>From Airport</li>
-            <li onClick={handleClick}>From Bus Depot</li>
-            <li onClick={handleClick}>From Macau Ferry</li>
+            <li onClick={(e) => handleClick(e, "HKIA")}>From Airport</li>
+            <li
+              onClick={(e) => handleClick(e, "Hong Kong West Kowloon Station")}
+            >
+              From High Spped Rail
+            </li>
+            <li onClick={(e) => handleClick(e, "China Ferry Terminal")}>
+              From Macau Ferry
+            </li>
+            <li
+              onClick={(e) =>
+                handleClick(e, "Austin Road Cross Boundary Coach Terminus")
+              }
+            >
+              From X Border busses
+            </li>
+            <li onClick={(e) => handleClick(e, "China Ferry Terminal")}>
+              Macau Ferry
+            </li>
           </ul>
         </div>
         {/* map-meenu wrapper*/}
 
         {/* map-main-content wrapper */}
         <div>
-          <MapDirections />
+          <MapDirections origin={origin} />
         </div>
         {/* map-main-content wrapper */}
       </div>

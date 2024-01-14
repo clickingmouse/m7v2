@@ -11,11 +11,15 @@ import {
 } from "@vis.gl/react-google-maps";
 
 //googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-export default function MapDirections() {
+export default function MapDirections({ origin }) {
+  console.log("origin in Mapdirections " + origin);
   const center = useMemo(
     () => ({ lat: 22.29874175739053, lng: 114.17236517374718 }),
     []
   );
+
+  //variable to hold coming from airport/bus/ship variable default to one
+  const [directionSelection, setDirectionSelection] = useState();
 
   return (
     <>
@@ -30,7 +34,7 @@ export default function MapDirections() {
               mapId={process.env.NEXT_PUBLIC_MAP_ID}
               fullscreenControl={false}
             >
-              <Directions />
+              <Directions origin={origin} />
             </Map>
           </APIProvider>
         </div>
@@ -39,8 +43,18 @@ export default function MapDirections() {
   );
 }
 
-function Directions() {
+function Directions({ origin }) {
   //get map instance
+  console.log("origin in directions " + origin);
+
+  // const [ovalue, setOValue] = useState(origin);
+  // // This will launch only if propName value has chaged.
+  // useEffect(() => {
+  //   setOValue(origin);
+  //   console.log("NEW ORIGIN " + origin);
+  // }, [origin]);
+
+  //////////
   const map = useMap();
   //load map library
   const routesLibrary = useMapsLibrary("routes");
@@ -54,6 +68,8 @@ function Directions() {
   const selected = routes[routeIndex];
   const leg = selected?.legs[0];
 
+  //const [origin, setOrigin] = useState();
+
   useEffect(() => {
     if (!routesLibrary || !map) return;
 
@@ -65,7 +81,8 @@ function Directions() {
     if (!directionsService || !directionsRenderer) return;
     directionsService
       .route({
-        origin: "Hong Kong International Airport",
+        //origin: "Hong Kong International Airport",
+        origin: origin,
         destination: { lat: 22.2986953, lng: 114.1724183 },
         travelMode: google.maps.TravelMode.TRANSIT,
         transitOptions: { modes: ["BUS"], routingPreference: "LESS_WALKING" },
@@ -75,7 +92,7 @@ function Directions() {
         directionsRenderer.setDirections(response);
         setRoutes(response.routes);
       });
-  }, [directionsService, directionsRenderer]);
+  }, [directionsService, directionsRenderer, origin]);
   console.log(routes);
   ////////////////////////////////////////////
 
@@ -85,6 +102,8 @@ function Directions() {
     directionsRenderer.setRouteIndex(routeIndex);
     console.log("---->" + routeIndex);
   }, [routeIndex, directionsRenderer]);
+
+  // wait for origin to update
 
   if (!leg) return null;
 
