@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./Logo";
 import Button from "./Button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 //bunk icon
 //<a href="https://www.flaticon.com/free-icons/bunk-bed" title="bunk bed icons">Bunk bed icons created by Ayub Irawan - Flaticon</a>
@@ -15,6 +16,8 @@ import Link from "next/link";
 //bg-emerald-800
 //{ toggle }: { toggle: () => void }
 export default function NavBar({ toggle }) {
+  const pathname = usePathname();
+  console.log("PATH = " + pathname);
   return (
     <>
       <div className=" relative w-full h-20 p-3 fixed top-0 bg-navcolor z-50">
@@ -48,7 +51,14 @@ export default function NavBar({ toggle }) {
                   href="/getting-here"
                   className="px-4 flex flex-col-reverse justify-end items-center"
                 >
-                  <span> Getting Here</span>
+                  <span
+                    className={`link ${
+                      pathname === "/getting-here" ? "text-gray-700" : ""
+                    }`}
+                  >
+                    {" "}
+                    Getting Here
+                  </span>
                   <svg
                     className="w-5"
                     xmlns="http://www.w3.org/2000/svg"

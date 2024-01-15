@@ -29,37 +29,54 @@ export default function GettingHere() {
     <>
       <div>GettingHere</div>
       {/* layout wrapper*/}
-      <div className="= w-full bg-gray-300 flex flex-col md:flex-row ">
-        <h5>test</h5>
-
+      <div className=" w-full bg-gray-300 flex flex-col md:flex-row ">
         {/* map-meenu wrapper*/}
-        <div>
-          <ul>
-            <li onClick={(e) => handleClick(e, "HKIA")}>From Airport</li>
+        <div className="">
+          <h5>FROM</h5>
+
+          <ul
+            className="flex flex-row md:flex-col"
+            style={{ backgroundColor: "rgb(186, 227, 242)" }}
+          >
+            <li
+              onClick={(e) => handleClick(e, "HKIA")}
+              className="cursor-pointer pointer-events-auto"
+              style={{ backgroundColor: "#D14728", color: "white" }}
+            >
+              HK International Airport
+            </li>
             <li
               onClick={(e) => handleClick(e, "Hong Kong West Kowloon Station")}
+              className="cursor-pointer pointer-events-auto"
             >
-              From High Spped Rail
+              West Kowloon High Spped Rail Terminal
             </li>
-            <li onClick={(e) => handleClick(e, "China Ferry Terminal")}>
-              From Macau Ferry
+            <li
+              onClick={(e) => handleClick(e, "China Ferry Terminal")}
+              className="cursor-pointer pointer-events-auto"
+            >
+              Macau Ferry
             </li>
             <li
               onClick={(e) =>
                 handleClick(e, "Austin Road Cross Boundary Coach Terminus")
               }
+              className="cursor-pointer pointer-events-auto"
             >
-              From X Border busses
+              Cross Border bus Depot
             </li>
-            <li onClick={(e) => handleClick(e, "China Ferry Terminal")}>
-              Macau Ferry
+            <li
+              onClick={(e) => handleClick(e, "Shenzhen Bay Port")}
+              className="cursor-pointer pointer-events-auto"
+            >
+              Shenzhen
             </li>
           </ul>
         </div>
         {/* map-meenu wrapper*/}
 
         {/* map-main-content wrapper */}
-        <div>
+        <div className="w-full">
           <MapDirections origin={origin} />
         </div>
         {/* map-main-content wrapper */}

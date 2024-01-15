@@ -1,11 +1,24 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+//todo
+// highlight current menu item on page
 //<Menu isOpen={isOpen} toggle={toggle} />
 const Menu = ({ isOpen, toggle }) => {
   console.log(isOpen);
   console.log(typeof toggle);
+
+  const pathname = usePathname();
+  console.log("PATH = " + pathname);
+  //  const router = useRouter();
+  // const [current, setCurrent] = useState(router.pathname);
+  // useEffect(() => {
+  //   setCurrent(router.pathname);
+  //   console.log(router.pathname);
+  // }, [router.pathname]);
   //    {isOpen,toggle,}: {isOpen: boolean; toggle: () => void;}): JSX.Element => {
   return (
     <>
@@ -39,7 +52,9 @@ const Menu = ({ isOpen, toggle }) => {
           </li>
           <li>
             <Link href="/getthingHere">
-              <p>Getting Here</p>
+              <p className={`link ${pathname === "/getting-here" ? "" : ""}`}>
+                Getting Here
+              </p>
             </Link>
           </li>
           <li>

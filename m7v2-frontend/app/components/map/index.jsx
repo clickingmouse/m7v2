@@ -114,9 +114,9 @@ function Directions({ origin }) {
     <div className="  ">
       {/*wrapper*/}
       <div className="directions z-50 relative bg grid grid-cols-3 gap-2 flex flex-row justify-end">
+        {/*col wrapper*}
         <div className="bg-blue-200 col-end-4">
           {" "}
-          {/*col wrapper*/}
           <h2>From HK International Airport</h2>
           <p>
             Recommmended - bus
