@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import GMap from "../components/map/Map";
 import MapDirections from "../components/map";
 //import a from '../components/map/Map'
@@ -15,7 +15,7 @@ import MapDirections from "../components/map";
 
 export default function GettingHere() {
   // state of starting location to pass to map
-  const [origin, setOrigin] = useState("Hong Kong International Airport");
+  const [origin, setOrigin] = useState("HKIA");
 
   //const handleSubmit = async (e) => {
   const handleClick = (e, selection) => {
@@ -24,6 +24,8 @@ export default function GettingHere() {
     setOrigin(selection);
     console.log(origin + " selected");
   };
+
+  //useEffect(() => {}, origin);
 
   return (
     <>
@@ -35,25 +37,29 @@ export default function GettingHere() {
           <h5>FROM</h5>
 
           <ul
-            className="flex flex-row md:flex-col"
+            className="flex flex-row md:flex-col my-1 text-right"
             style={{ backgroundColor: "rgb(186, 227, 242)" }}
           >
             <li
               onClick={(e) => handleClick(e, "HKIA")}
-              className="cursor-pointer pointer-events-auto"
+              className="cursor-pointer pointer-events-auto  p-2"
               style={{ backgroundColor: "#D14728", color: "white" }}
             >
-              HK International Airport
+              <p
+                className={`${origin === "HKIA" ? "font-bold" : "text-black"}`}
+              >
+                HK International Airport
+              </p>
             </li>
             <li
               onClick={(e) => handleClick(e, "Hong Kong West Kowloon Station")}
-              className="cursor-pointer pointer-events-auto"
+              className="cursor-pointer pointer-events-auto  p-2"
             >
               West Kowloon High Spped Rail Terminal
             </li>
             <li
               onClick={(e) => handleClick(e, "China Ferry Terminal")}
-              className="cursor-pointer pointer-events-auto"
+              className="cursor-pointer pointer-events-auto  p-2"
             >
               Macau Ferry
             </li>
@@ -61,13 +67,13 @@ export default function GettingHere() {
               onClick={(e) =>
                 handleClick(e, "Austin Road Cross Boundary Coach Terminus")
               }
-              className="cursor-pointer pointer-events-auto"
+              className="cursor-pointer pointer-events-auto  p-2"
             >
               Cross Border bus Depot
             </li>
             <li
               onClick={(e) => handleClick(e, "Shenzhen Bay Port")}
-              className="cursor-pointer pointer-events-auto"
+              className="cursor-pointer pointer-events-auto  py-2"
             >
               Shenzhen
             </li>
