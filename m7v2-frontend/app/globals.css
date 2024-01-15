@@ -30,7 +30,8 @@ html {
   @apply w-full h-screen;
 }
 
-.map-menu {
+.map-menu-selected {
+  back-groundcolor: #d14728;
 }
 /*
 .hero-text {

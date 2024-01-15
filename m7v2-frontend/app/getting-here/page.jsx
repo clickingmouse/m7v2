@@ -17,6 +17,12 @@ export default function GettingHere() {
   // state of starting location to pass to map
   const [origin, setOrigin] = useState("HKIA");
 
+  // for storing directions
+  const [instructions, setInstructions] = useState([]);
+  const updateInstructions = (instructions) => {
+    setInstructions(instructions);
+  };
+
   //const handleSubmit = async (e) => {
   const handleClick = (e, selection) => {
     e.preventDefault();
@@ -37,16 +43,20 @@ export default function GettingHere() {
           <h5>FROM</h5>
 
           <ul
-            className="flex flex-row md:flex-col my-1 text-right"
+            className="flex flex-row md:flex-col my-1 text-right md:divide-y md:divide-white"
             style={{ backgroundColor: "rgb(186, 227, 242)" }}
           >
             <li
               onClick={(e) => handleClick(e, "HKIA")}
               className="cursor-pointer pointer-events-auto  p-2"
-              style={{ backgroundColor: "#D14728", color: "white" }}
+              style={{ color: "white" }}
             >
               <p
-                className={`${origin === "HKIA" ? "font-bold" : "text-black"}`}
+                className={`${
+                  origin === "HKIA"
+                    ? "font-bold bg-originselected"
+                    : "text-black"
+                }`}
               >
                 HK International Airport
               </p>
