@@ -49,7 +49,10 @@ export default function NavBar({ toggle }) {
               <li className=" py-1 ">
                 <Link
                   href="/getting-here"
-                  className="px-4 flex flex-col-reverse justify-end items-center"
+                  className={`${
+                    pathname === "/getting-here" ? "text-gray-700" : ""
+                  }  
+                  px-4 flex flex-col-reverse justify-end items-center `}
                 >
                   <span
                     className={`link ${
