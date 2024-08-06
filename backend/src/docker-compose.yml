@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: majestic
+      POSTGRES_PASSWORD: majestic
+    ports:
+      - '5432:5432'

@@ -63,13 +63,13 @@ export default function Hero() {
         ></div>
 
         <div className="flex flex-wrap flex-col justify-center items-start content-start  absolute w-full h-full  heroContent  z-50  mx-auto px-5 md:px-6 transition-all duration-300 pt-12 lg:pt-40 pb-12 lg:pb-40 ">
-          <div className="flex flex-row justify-center content-center">
+          <div className="flex flex-row justify-center content-center flex-wrap justify-items-start">
             <Link
               href="https://hotels.cloudbeds.com/reservation/IOlzSh"
               //passHref={true}
               el="noopener noreferrer"
               target="_blank"
-              className=" rounded-full py-2 px-3 uppercase text-4xl font-bold cursor-pointer tracking-wide text-white
+              className=" rounded-full py-2  px-3 uppercase text-4xl font-bold cursor-pointer tracking-wide text-white
           border-orange-600 border-2 bg-orange-700 pointer-events-auto
           "
             >
